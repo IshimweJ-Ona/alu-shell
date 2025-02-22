@@ -4,6 +4,6 @@ for file in *; do
     # Check if it is not hidden file 
     if [[ "$file" != .* && "$file" == *-* ]]; then
        # Extarct and display the part of the name after the first dash
-       echo "${file}"
+       echo "${file#*-}"
     fi
 done
