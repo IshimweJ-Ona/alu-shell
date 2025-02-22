@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# The script reads the content of the /etc/passwd using a while  loop IFS variables
+IFS=":"
+
+# Read the /etc/passwd file line by line
+while read -r username passwd user_id _ home_dir shell; do
+    echo "The user $username is part of the $group_id gang, lives in $home_dir and rides. $user_id's place is protected by the passcode $password, ,ore info about the user here: $user_id"
+done < /etc/passwd
