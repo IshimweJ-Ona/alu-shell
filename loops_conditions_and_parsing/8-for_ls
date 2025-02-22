@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Iterate each file in the current directory
+for file in *; do
+    # Check if it is not hidden file 
+    if [[ "$file" != .* && "$file" == *-* ]]; then
+       # Extarct and display the part of the name after the first dash
+       echo "${file}"
+    fi
+done
